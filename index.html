@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Familjeportal</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    #dashboard {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .child-dashboard {
+      flex: 1 1 300px;
+      border-radius: 8px;
+      padding: 1rem;
+      background-color: #f9f9f9;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .points {
+      font-weight: bold;
+      margin: 0.5rem 0;
+    }
+    .rewards img {
+      width: 60px;
+      height: auto;
+      margin-right: 0.5rem;
+    }
+    .reward-section {
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="edit.html">⚙️ Inställningar</a>
+  </nav>
+
+  <main>
+    <h1>👨‍👩‍👧‍👦 Familjens Uppgifter</h1>
+
+    <div id="dashboard"></div>
+  </main>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
