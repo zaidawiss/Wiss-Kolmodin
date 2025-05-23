@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redigera Uppgifter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">🏠 Tillbaka</a>
+  </nav>
+
+  <main>
+    <h1>⚙️ Redigera Uppgifter & Familjemedlemmar</h1>
+
+    <section>
+      <h2>👥 Lägg till familjemedlem</h2>
+      <form id="memberForm">
+        <label for="memberName">Namn:</label>
+        <input type="text" id="memberName" required><br>
+
+        <label for="memberType">Typ:</label>
+        <select id="memberType" required>
+          <option value="barn">Barn</option>
+          <option value="vuxen">Vuxen</option>
+        </select><br>
+
+        <div id="birthdateField">
+          <label for="memberBirthdate">Födelsedatum:</label>
+          <input type="date" id="memberBirthdate"><br>
+        </div>
+
+        <label for="memberColor">Färg (för poängvisning):</label>
+        <input type="color" id="memberColor" value="#2a7a5f"><br><br>
+
+        <button type="submit">➕ Lägg till medlem</button>
+      </form>
+
+      <ul id="memberList"></ul>
+    </section>
+
+    <section>
+      <h2>📝 Lägg till eller redigera uppgift</h2>
+      <form id="taskForm">
+        <label for="taskName">Uppgift:</label>
+        <input type="text" id="taskName" required><br>
+
+        <label for="taskPoints">Poäng:</label>
+        <input type="number" id="taskPoints" value="10"><br>
+
+        <label for="taskTime">Tid (07:00, 11:00, 14:00, 18:00):</label>
+        <input type="time" id="taskTime"><br>
+
+        <label for="taskIcon">Symbol:</label>
+        <select id="taskIcon">
+          <option value="assets/icons/bed.png">🛏 Bädda</option>
+          <option value="assets/icons/toothbrush.png">🪥 Tänder</option>
+          <option value="assets/icons/lego.png">🧱 Lego</option>
+          <option value="assets/icons/toys.png">🧸 Leksaker</option>
+          <option value="assets/icons/wateringcan.png">🌸 Vattna</option>
+        </select><br>
+
+        <label for="taskVideo">Instruktionsvideo (URL):</label>
+        <input type="text" id="taskVideo"><br>
+
+        <label for="assignedChildren">Tilldela till:</label>
+        <select id="assignedChildren" multiple></select><br><br>
+
+        <button type="submit">✅ Spara uppgift</button>
+      </form>
+
+      <ul id="taskList"></ul>
+    </section>
+  </main>
+
+  <script type="module" src="edit.js"></script>
+</body>
+</html>
